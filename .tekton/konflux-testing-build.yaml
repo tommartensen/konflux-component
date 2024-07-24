@@ -56,3 +56,7 @@ spec:
 
   pipelineRef:
     name: basic-component-pipeline
+
+  # The pipeline regularly takes >1h to finish.
+  timeouts:
+    pipeline: 4h
