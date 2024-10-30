@@ -11,7 +11,7 @@ metadata:
     # TODO(ROX-21073): re-enable for all PR branches
     pipelinesascode.tekton.dev/on-cel-expression:
       (
-        event == "push" && target_branch.matches("master")
+        event == "push" && target_branch.matches("refs/tags/*-nightly-*|master")
       ) || (
         event == "pull_request" && (
           (
